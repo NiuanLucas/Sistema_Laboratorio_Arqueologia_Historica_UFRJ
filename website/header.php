@@ -179,7 +179,7 @@ justify-content: left;
 
 			#menu, 
 			#toggle-menu {
-			  background-color: rgba(55, 55, 55, 1) !important;
+			  background-color: rgb(80, 30, 0) !important;
 			}
 
 			 #menu .sub-menu a {
@@ -316,8 +316,8 @@ justify-content: left;
         <div class="row p-0">
 
           <div class="text-left d-none d-md-block justify-content-left mb-1">
-            <img src="../assets/images/logo_museu_ufrj.png" class="img-logo"> 
-            <img src="../assets/images/logo_laboratorio.png" class="img-logo">						
+            <img src="../assets/images/logo_museu_ufrj_color.png" class="img-logo"> 
+            <img src="../assets/images/logo_laboratorio_color.png" class="img-logo">						
           </div>
 
           <div class="float-right d-none d-md-block" style="position: absolute; top: 80%; left: 37.5%;">
