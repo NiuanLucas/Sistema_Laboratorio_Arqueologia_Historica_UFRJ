@@ -122,7 +122,7 @@
 
     $tr = "SELECT * ";
 
-    $tr .= "FROM paginas_fixas ORDER BY pagina_titulo ASC ";
+    $tr .= "FROM paginas_fixas ORDER BY pagina_id ASC ";
 
     $consulta_tr = mysqli_query($conecta, $tr);
 

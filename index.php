@@ -1,6 +1,6 @@
 <script>
 
-window.location.href = "website/home/inicio.php?pg_id=2";
+window.location.href = "website/inicio.php?pg_id=2";
 
 </script>
 

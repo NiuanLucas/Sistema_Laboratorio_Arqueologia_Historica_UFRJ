@@ -584,8 +584,8 @@ return $texto_html_pagina;
 
 
 function exibir_caminho($tabela, $texto_id){
-header('Content-type: text/html; charset=utf-8');
-mysqli_set_charset('utf8');
+//header('Content-type: text/html; charset=utf-8');
+//mysqli_set_charset('utf8');
 
 $conecta = $_SERVER["conecta"];
 

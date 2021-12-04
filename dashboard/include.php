@@ -2,13 +2,13 @@
 
 <?php
 
-define('DB_HOST',"192.168.1.33:3306");
+define('DB_HOST',"localhost");
 
-define('DB_USER',"lap.mn");
+define('DB_USER',"root");
 
-define('DB_PASS',"JhVV7gRYhAbBtRDVFFKEFBbUfeR2xh");
+define('DB_PASS',"");
 
-define('DB_NAME',"lap.mn");
+define('DB_NAME',"lah_museu_ufrj");
 
 define('URL',"https://lap.mn.ufrj.br");
 $url = URL;

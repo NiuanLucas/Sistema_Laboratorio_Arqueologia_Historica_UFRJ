@@ -1,34 +1,18 @@
 <?php require_once "../header_dashboard.php";  ?>
 
-
-
 <div class="container">
-
 	<div class="row">
-
   <div class="col col-12 mt-5 mb-5">
 
 
-
-
-
     <div class="row">
-
     <h3 class="h4 m-3 col-0"><i class="fas fa-file"></i> Páginas fixas</h3>
 
-
-
-    <!-- <a href='inserir_paginas_fixas.php' class="col-0">
-
+    <a href='inserir_paginas_fixas.php' class="col-0">
       <button type='button' class='btn bg-dark text-white mt-3 ml-3'> <i class="fas fa-plus"></i> Inserir nova página fixa</button>
-
-    </a>  -->  
+    </a>  
 
     </div>
-
-
-
-
 
   <hr class="my-2">
 
@@ -70,7 +54,7 @@
 
             <!-- <td class="d-none" ><?php //echo $linha["pagina_conteudo"] ?></td> -->
 
-            <td><?php echo mb_strimwidth($linha["pagina_descricao"], 0, 60, "...") ?></td>
+            <td><?php echo mb_strimwidth($linha["pagina_descricao"], 0, 20, "...") ?></td>
 
             <!-- <td><?php //echo $linha["pagina_palavras_chaves"] ?></td> -->
 
@@ -80,7 +64,7 @@
 
             <a class="m-2" href='alterar_paginas_fixas.php?pg_id=<?php echo $linha["pagina_id"] ?>'><i class="fas fa-edit"></i> Editar </a>
 
-            <!-- <a class="m-2" href='excluir_paginas_fixas.php?pg_id=<?php echo $linha["pagina_id"] ?>'><i class="fas fa-times"></i> Excluir </a> -->
+            <a class="m-2" href='excluir_paginas_fixas.php?pg_id=<?php echo $linha["pagina_id"] ?>'><i class="fas fa-times"></i> Excluir </a>
 
             </td>
 
