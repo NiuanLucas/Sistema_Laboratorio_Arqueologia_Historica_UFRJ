@@ -21,14 +21,14 @@ img {
 }
 
 h1  {
-	font-family: Helvetica, sans-serif !important; 
+	font-family: Georgia , serif !important; 
 	color: rgba(0, 0, 0) !important;
 	font-size: 26px !important;
 	line-height: 250% !important; 
 }
 
 h2  {
-	font-family: Helvetica, sans-serif !important; 
+	font-family:  Georgia , serif !important; 
 	color: rgba(0, 0, 0) !important;
 	font-size: 26px !important;
 	line-height: 100% !important;
@@ -39,7 +39,7 @@ h2  {
 }
 
 h3  {
-	font-family: Helvetica, sans-serif !important;
+	font-family:  Georgia , serif !important;
 	color: rgba(0, 0, 0) !important;	 
 	color: rgba(0,0,0) !important;	
 	font-size: 20px !important;
@@ -48,7 +48,7 @@ h3  {
 }
 
 .card-title {
-	font-family: Helvetica, sans-serif !important;
+	font-family:  Georgia , serif !important;
 	font-size: 20px !important; 
 	font-weight: bolder;
 }
@@ -59,14 +59,14 @@ h3  {
 }
 
 p {
-	font-family: Arial, sans-serif !important; 
+	font-family: "Verdana", Times, sans-serif !important; 
 	color: rgba(0, 0, 0) !important;	
 	font-size: 16px !important;
 	line-height: 175% !important;
 }
 
 li {
-	font-family: Arial, sans-serif !important; 
+	font-family:"Verdana", Times, sans-serif !important; 
 	color: rgba(0, 0, 0) !important;	
 	font-size: 17px !important;
 	line-height: 175% !important;
@@ -74,18 +74,29 @@ li {
 
 
  a {
-	font-family: Arial, sans-serif !important; 
+	font-family: "Verdana", Times, sans-serif !important; 
 	color: rgba(50, 50, 50);	
 	font-size: 15px;
 }
 
 .card-title-sub {
 	font-size: 12px !important;
-	font-family: Arial, sans-serif !important; 
+	font-family: "Verdana", Times, sans-serif !important; 
 	color: rgba(110,110,110,1);
 }
 
+.img-card-2 {
+		width: 200px;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 0px;
 
+}
+
+
+.text-lah { 
+color: #603117;
+}
 
 .img-invert {
 	filter: invert(100%);
@@ -161,12 +172,13 @@ margin-right: 5px !important;
 
 
 .nav-link {
-	color:  #fff !important;
+	color:  rgb(255, 255, 255) !important;
 	letter-spacing: 0px;
 	font-family: 'Segoe UI', sans-serif !important;
 	padding-left: 15px !important ;
 	padding-right: 15px !important ;
 	font-size: 15px !important;
+	text-decoration: underline  !important;
 }
 
 
@@ -256,10 +268,10 @@ z-index: 10;
 }
 
 .slide_topo{
-	width: 85%;
+	width: 75%;
 	height: 300px;
 	top: 0%;
-	left: 7.5%;
+	left: 12.5%;
 	position: absolute;
 	background-position: center;
 	background-size: cover;
@@ -272,22 +284,22 @@ z-index: 10;
 
     0%{     
     opacity: 1;
-    background-image: url("../images/slide_1.jpg"), linear-gradient(180deg, rgba(255,255,255,0.65), rgba(255,255,255,0.75), rgba(255,255,255,0.9), rgba(255,255,255,0.9), #fff);
+    background-image: url("../images/slide_1.jpg"), linear-gradient(180deg, rgba(230, 205, 165,0.65), rgba(230, 205, 165,0.75), rgba(230, 205, 165,0.9), rgba(255,255,255,0.9), #fff);
 	background-blend-mode: screen;}
-
+/*
     33.5%{     
     opacity: 1;
-    background-image: url("../images/slide_2.jpg"), linear-gradient(180deg,  rgba(255,255,255,0.65), rgba(255,255,255,0.75), rgba(255,255,255,0.9), rgba(255,255,255,0.9), #fff);
+    background-image: url("../images/slide_2.jpg"), linear-gradient(180deg,  rgba(230, 205, 165,0.65), rgba(230, 205, 165,0.75), rgba(230, 205, 165,0.9), rgba(255,255,255,0.9), #fff);
 	background-blend-mode: screen;}
     
     66.5%{     
     opacity: 1;
-    background-image: url("../images/slide_3.jpg"), linear-gradient(180deg,  rgba(255,255,255,0.65), rgba(255,255,255,0.75), rgba(255,255,255,0.9), rgba(255,255,255,0.9), #fff);
+    background-image: url("../images/slide_3.jpg"), linear-gradient(180deg,  rgba(230, 205, 165,0.65), rgba(230, 205, 165,0.75), rgba(230, 205, 165,0.9), rgba(255,255,255,0.9), #fff);
 	background-blend-mode: screen;}
-
+*/
     100%{     
     opacity: 1;
-    background-image: url("../images/slide_1.jpg"), linear-gradient(180deg, rgba(255,255,255,0.65), rgba(255,255,255,0.75), rgba(255,255,255,0.9), rgba(255,255,255,0.9), #fff);
+    background-image: url("../images/slide_1.jpg"), linear-gradient(180deg, rgba(230, 205, 165,0.65), rgba(230, 205, 165,0.75), rgba(230, 205, 165,0.9), rgba(255,255,255,0.9), #fff);
 	background-blend-mode: screen;}
      
 }
@@ -297,6 +309,10 @@ z-index: 10;
 
 .bg-dark {
 	background-color: rgb(80, 30, 0) !important;
+}
+
+.bg-lah {
+	background-color: rgba(230, 205, 165,0.65) !important;
 }
 
 .text-dark {
@@ -356,8 +372,8 @@ background-color: rgba(150,190,15) !important;
 /*PC*/
 @media (min-width: 800px) {
   body {
-    //background-image: url("../images/fundo_BW.jpg");
-    background-color: rgba(220,220,220,1);
+    background-image: url("https://images.pexels.com/photos/4356144/pexels-photo-4356144.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+    background-color: rgba(230, 205, 165, 0.5);
   	background-blend-mode: lighten;
 	background-position: center;
 	background-size: cover;
@@ -370,7 +386,7 @@ background-color: rgba(150,190,15) !important;
 
 	 box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.25);
 	 background-color: #fff;
-	 width: 85%;
+	 width: 75%;
 	 padding: 0px;
 	}
 }

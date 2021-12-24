@@ -329,7 +329,8 @@
 
     <label for="exampleFormControlTextarea1">Texto 1 (ao lado do slide/imagem)</label>
 
-    <textarea required  class="form-control ckeditor" name="pagina_modular_conteudo" id="pagina_modular_conteudo" rows="5"><?php echo base64_decode($dados_pagina['pagina_modular_conteudo']); ?></textarea>
+    <textarea required  class="form-control ckeditor" name="pagina_modular_conteudo" id="pagina_modular_conteudo" rows="5">
+      <?php echo base64_decode($dados_pagina['pagina_modular_conteudo']); ?></textarea>
 
   </div>
 
@@ -339,7 +340,8 @@
 
     <label for="exampleFormControlTextarea1">Texto 2 (parte inferior)</label>
 
-    <textarea required  class="form-control ckeditor" name="pagina_modular_conteudo_2" id="pagina_modular_conteudo_2" rows="5"><?php echo base64_decode($dados_pagina['pagina_modular_conteudo_2']); ?></textarea>
+    <textarea required  class="form-control ckeditor" name="pagina_modular_conteudo_2" id="pagina_modular_conteudo_2" rows="5">
+      <?php echo base64_decode($dados_pagina['pagina_modular_conteudo_2']); ?></textarea>
 
   </div>
 

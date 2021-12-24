@@ -20,6 +20,8 @@
 
         $pagina_conteudo = base64_encode($_POST["pagina_conteudo"]);
 
+        $pagina_conteudo_2 = base64_encode($_POST["pagina_conteudo_2"]);
+
         $pagina_categoria = $_POST["pagina_categoria"];
 
         $pagina_descricao = $_POST["pagina_descricao"];
@@ -71,6 +73,8 @@
         $atualizar .= "pagina_titulo = '{$pagina_titulo}', ";
 
         $atualizar .= "pagina_conteudo = '{$pagina_conteudo}', ";
+
+        $atualizar .= "pagina_conteudo_2 = '{$pagina_conteudo_2}', ";
 
         $atualizar .= "pagina_categoria = '{$pagina_categoria}', ";
 
@@ -247,8 +251,16 @@
   <div class="form-group panel-body">
 
     <label for="exampleFormControlTextarea1">Conteudo</label>
+    <textarea required="" class="form-control ckeditor" name="pagina_conteudo" id="pagina_conteudo" rows="5">
+      <?php echo base64_decode($dados_pagina['pagina_conteudo']); ?></textarea>
 
-    <textarea required="" class="form-control ckeditor" name="pagina_conteudo" id="pagina_conteudo" rows="5"><?php echo base64_decode($dados_pagina['pagina_conteudo']); ?></textarea>
+  </div>
+
+  <div class="form-group panel-body">
+
+  <label for="exampleFormControlTextarea2">Conteudo Secundário</label>
+  <textarea required="" class="form-control ckeditor" name="pagina_conteudo_2" id="pagina_conteudo_2" rows="5">
+    <?php echo base64_decode($dados_pagina['pagina_conteudo_2']); ?></textarea>
 
   </div>
 
@@ -256,6 +268,14 @@
 
     <script>
     var editor=CKEDITOR.replace( 'pagina_conteudo',{
+      height: 300,
+      extraPlugins : 'filebrowser',
+      filebrowserBrowseUrl:'browser.php?type=Images',
+      filebrowserUploadMethod:"form",
+      filebrowserUploadUrl:"upload.php"
+    });
+
+    var editor=CKEDITOR.replace( 'pagina_conteudo_2',{
       height: 300,
       extraPlugins : 'filebrowser',
       filebrowserBrowseUrl:'browser.php?type=Images',

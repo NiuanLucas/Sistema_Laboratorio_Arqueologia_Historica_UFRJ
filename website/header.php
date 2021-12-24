@@ -315,15 +315,18 @@ justify-content: left;
       <header class="blog-header mt-3  d-none d-md-block w-100 border-0 mb-2">
         <div class="row p-0">
 
-          <div class="text-left d-none d-md-block justify-content-left mb-1">
-            <img src="../assets/images/logo_museu_ufrj_color.png" class="img-logo"> 
-            <img src="../assets/images/logo_laboratorio_color.png" class="img-logo">						
+          
+		<div class="d-flex justify-content-center mb-2">
+            <img src="../assets/images/logo_laboratorio_color_3.png" class="w-50" style="position: relative; top: 0%; left: 27.5%;">	
+			<!-- <img src="../assets/images/logo_museu_ufrj_color.png" class="img-logo"> -->					
           </div>
 
           <div class="float-right d-none d-md-block" style="position: absolute; top: 80%; left: 37.5%;">
+			<!--
           <h6 class="font-arial" style="font-size: 22.5px !important;">
           Laboratório de Arqueologia Histórica, Museu Nacional, UFRJ
       	  </h6>
+			-->
       	  </div>
 
         </div>
@@ -344,9 +347,9 @@ justify-content: left;
 		  <input type="checkbox" id="tm">
 		  <ul class="main-menu clearfix">
 
-		    <li><a href="../inicio.php?pg_id=">Inicio</a></li>
+		      <li><a href="../inicio.php?pg_id=">Inicio</a></li>
 			  <li><a href="../colecoes/colecoes.php?pg_id=11">Arqueologia Histórica no Brasil</a></li>
-        <li><a href="../contato/contato.php?pg_id=18">Pessoas</a></li>
+        	  <li><a href="../contato/contato.php?pg_id=18">Pessoas</a></li>
 			  <li><a href="#">Infraestrutura</a></li>
 			  <li><a href="#">Pesquisas</a></li>
 			  <li><a href="#">Notícias</a></li>

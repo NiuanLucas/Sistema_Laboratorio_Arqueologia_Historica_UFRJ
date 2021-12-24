@@ -94,7 +94,7 @@ d1[0].insertAdjacentHTML('beforeBegin', intro + texto_1_link + " / " + texto_3_l
         <div class="col-6 col-md text-left mb-0">
         <h5 class="font-weight-bold font-arial">Contato</h5>
          	<ul class="list-unstyled">
-              <li><a class="text-white" href="#" ><a target="_blank" href="mailto:lap@mn.ufrj.br?subject=Contato LAP" class="text-white"><i class="far fa-envelope"></i> lap@mn.ufrj.br</a></a></li>            
+              <li><a class="text-white" href="#" ><a target="_blank" href="mailto:lah@mn.ufrj.br?subject=Contato LAP" class="text-white"><i class="far fa-envelope"></i> lah@mn.ufrj.br</a></a></li>            
               <li><a class="text-white"  target="_blank" href="../contato/contato.php?pg_id=18" target="_self"><i class="fas fa-map-marker-alt"></i> Como nos encontrar?</a></a></li>
             </ul>
         </p>
@@ -103,9 +103,9 @@ d1[0].insertAdjacentHTML('beforeBegin', intro + texto_1_link + " / " + texto_3_l
         <div class="col-6 col-md text-left mb-0">
     		<h5 class="font-weight-bold font-arial">Redes Sociais</h5>
             <ul class="list-unstyled">
-              <li><a href="https://www.instagram.com/balburdialap.mn/" target="_blank" class="mt-4 text-white"><i class="fab fa-instagram"></i> @balburdialap.mn</li>
-              <li><a href="https://www.facebook.com/lap.mnufrj" target="_blank" class="mt-4 text-white"> <i class="fab fa-facebook"></i> /lap.mnufrj</li></a>
-              <li><a href="https://www.youtube.com/channel/UCRRhtNQqbJJpOpvqOjKFZ4g" target="_blank" class="mt-4 text-white"> <i class="fab fa-youtube"></i> /Youtube</li></a>
+              <li><a href="#" target="_blank" class="mt-4 text-white"><i class="fab fa-instagram"></i> @lah.mn</li>
+              <li><a href="#" target="_blank" class="mt-4 text-white"> <i class="fab fa-facebook"></i> /lah.mn</li></a>
+              <li><a href="#" target="_blank" class="mt-4 text-white"> <i class="fab fa-youtube"></i> /Youtube</li></a>
             </ul>
         </div>
 
