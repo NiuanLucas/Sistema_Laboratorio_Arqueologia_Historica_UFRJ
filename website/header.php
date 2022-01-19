@@ -23,7 +23,7 @@
 
 
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns#">
+<html prefix="og: http://ogp.me/ns##">
 <head>
   <title> Laboratório de Arqueobotânica e Paisagem – MN/UFRJ  </title>
   <meta charset="utf-8" />
