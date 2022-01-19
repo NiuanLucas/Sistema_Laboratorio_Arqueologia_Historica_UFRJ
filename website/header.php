@@ -92,6 +92,7 @@ justify-content: left;
 }  
 
 
+		
 /* ============ desktop view ============ *
 @media all and (min-width: 992px) {
   .navbar .nav-item .dropdown-menu hover-drop { display: none; }
@@ -174,7 +175,10 @@ justify-content: left;
 			#menu a {
 			  position: relative;
 			  display: block;
-			  color: white;  
+			  color: white;
+			  text-decoration: none;
+			  text-transform: uppercase;
+
 			}
 
 			#menu, 

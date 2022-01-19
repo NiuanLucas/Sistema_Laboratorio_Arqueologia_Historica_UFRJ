@@ -1,6 +1,6 @@
-- alterar logo
-- letra maiscula sem sublinhada painel
-- remover o sobre
-- remover youtube
-- remover contato rodape
+- alterar logo -FEITO
+- letra maiscula sem sublinhada painel -FEITO
+- remover o sobre -FEITO
+- remover youtube - FEITO
+- remover contato rodape -FEITO
 - colocar logotipos parceiors rodape, CNPQ , Faperg e Caps

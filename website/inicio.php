@@ -128,10 +128,6 @@
 
     <div class="col-md-4">
       <div class="position-sticky" style="top: 2rem;">
-        <div class="p-4 mb-3 bg-lah">
-          <h4 class="fst-italic"> <i class="far fa-bookmark"></i> Sobre</h4>
-          <p class="mb-0">	Imperdiet elit elementum aliquet sed vel, nulla eleifend adipiscing phasellus sociosqu duis, nulla elementum eget tempus.</p>
-        </div>
 
         <div class="p-4">
           <h4 class="fst-italic"> <i class="fas fa-sitemap"></i> Mapa do site </h4>
