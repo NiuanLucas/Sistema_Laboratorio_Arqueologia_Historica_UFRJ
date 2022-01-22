@@ -386,18 +386,16 @@
 
           <li class="nav-item">
 
-            <a class="nav-link" href="paginas_modulares.php"><i class="fas fa-scroll"></i> Páginas modulares</a>
+            <a class="nav-link" href="paginas_modulares.php"><i class="fas fa-scroll"></i> Notícias</a>
 
           </li> 
 
 
-
-           <li class="nav-item">
-
-            <a class="nav-link" href="producao_academica.php"><i class="fas fa-file-signature"></i> Produção Acadêmica</a>
-
-          </li>          
-
+          <!--
+            <li class="nav-item">
+              <a class="nav-link" href="producao_academica.php"><i class="fas fa-file-signature"></i> Produção Acadêmica</a>
+            </li>          
+          -->
 
 
           <li class="nav-item">
@@ -418,7 +416,7 @@
 
           <li class="nav-item" >
 
-            <a class="nav-link" href="slides.php"><i class="fas fa-images"></i> Slides e Fotos</a>
+            <a class="nav-link" href="slides.php"><i class="fas fa-images"></i> Slides </a>
 
           </li>
 

@@ -3,4 +3,4 @@
 - remover o sobre -FEITO
 - remover youtube - FEITO
 - remover contato rodape -FEITO
-- colocar logotipos parceiors rodape, CNPQ , Faperg e Caps
+- colocar logotipos parceiors rodape, CNPQ , Faperg e Caps -FEITO

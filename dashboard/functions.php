@@ -10,23 +10,24 @@ $conecta = $_SERVER["conecta"];
 
 if($slide > 0) {
 $slide = $slide;
-} else {
-$pagina_id =  $_GET["pg_id"];
-//Consulta a tabela usuarios
-$pagina_info = "SELECT * ";
-$pagina_info .= "FROM paginas_modulares ";
-$pagina_info .= "WHERE pagina_modular_id = {$pagina_id} ";
-//ERRO
-$info_pagina = mysqli_query($conecta, $pagina_info);
-if(!$info_pagina) {
-die(" Falha na Base de Dados! Function Pagina Modular Slide");  
-} else {
-  echo "";
-}
-//DADOS
-$dados_pagina = mysqli_fetch_assoc($info_pagina);        
-$slide = $dados_pagina["pagina_modular_slide"];
-}
+
+//////////////////////////////////////////////////////////
+} else  {
+
+    $pagina_id =  $_GET["pg_id"];
+    $pagina_info = "SELECT * FROM paginas_modulares WHERE pagina_modular_id = {$pagina_id} ";
+    $info_pagina = mysqli_query($conecta, $pagina_info);
+        if(!$info_pagina) {
+        die(" Falha na Base de Dados! Function Pagina Modular Slide");  
+        } else {
+        echo "";
+        }
+    //DADOS
+    $dados_pagina = mysqli_fetch_assoc($info_pagina);        
+    $slide = $dados_pagina["pagina_modular_slide"];
+    }
+
+//////////////////////////////////////////////////////////
 
 // Consulta a Tabela Slides
     $consultar_slide = "SELECT * ";
@@ -82,7 +83,83 @@ $slide = $dados_pagina["pagina_modular_slide"];
     
     }   
 
+    function exibir_slide_fixo($slide, $folder, $width, $height){
 
+        $conecta = $_SERVER["conecta"];
+        
+        if($slide > 0) {
+        $slide = $slide;
+        //////////////////////////////////////////////////////////
+        } else  {
+            $pagina_id =  $_GET["pg_id"];
+            $pagina_info = "SELECT * FROM paginas_fixas WHERE pagina_id = {$pagina_id} ";
+            $info_pagina = mysqli_query($conecta, $pagina_info);
+                if(!$info_pagina) {
+                die(" Falha na Base de Dados! Function Pagina Fixa Slide");  
+                } else {
+                echo "";
+                }
+            //DADOS
+            $dados_pagina = mysqli_fetch_assoc($info_pagina);        
+            $slide = $dados_pagina["pagina_slide"];
+            }
+        //////////////////////////////////////////////////////////
+        
+        // Consulta a Tabela Slides
+            $consultar_slide = "SELECT * ";
+            $consultar_slide .= "FROM slides ";
+            $consultar_slide .= "WHERE  slide_id = $slide ";
+            $consulta_slide = mysqli_query($conecta, $consultar_slide);
+            if(!$consulta_slide) {
+                if($slide == " "){
+                    return 0;
+                    }
+                die("</br> Falha na consulta ao banco FUNCTIONS Slides </br></br> " .$consultar_slide. " </br></br>  ");   
+            }
+    
+            $linha4 = mysqli_fetch_assoc($consulta_slide);
+            $texto_html_slide =  
+            "<div id='carouselExampleControls' data-interval='5000' class='carousel slide' 
+            data-ride='carousel'>
+            <div class='carousel-inner'>
+            <div class='carousel-item active'>
+            <img class='d-block image-slide-fix' style='width: ".$width." !important; max-height: ".$height." !important; '  src='"  .$folder.$linha4['slide_1']. "' >
+            </div> "; 
+        
+            for ($i = 2; $i <= $linha4["slide_tamanho"]; $i++) {
+            $slide  = "slide_".$i;
+            $texto_html_slide .=  "<div class='carousel-item'>
+              <img class='d-block image-slide-fix' style='width: ".$width." !important; max-height: ".$height." !important;'   src='" .$folder.$linha4['slide_'.$i]. "'>
+            </div>" ;
+            }
+        
+            if ($linha4["slide_tamanho"] > 1) {
+                echo "<style type='text/css'>   
+            .carousel .carousel-control-next{ opacity: 0; transition: 0.5s all; }
+            .carousel:hover .carousel-control-next{ opacity: 1; transition: 0.5s  all;  }
+            .carousel .carousel-control-prev{ opacity: 0; transition: 0.5s  all; }
+            .carousel:hover .carousel-control-prev{ opacity: 1; transition: 0.5s  all; } </style>";   
+            } else {
+                 echo "<style type='text/css'>   
+            .carousel .carousel-control-next{ opacity: 0; transition: 0.5s all; }
+            .carousel .carousel-control-prev{ opacity: 0; transition: 0.5s  all; } </style>"; 
+            }
+        
+            $texto_html_slide .=   "</div>
+            <a class='carousel-control-prev'
+            href='#carouselExampleControls' role='button' data-slide='prev'>
+              <span class='carousel-control-prev-icon' aria-hidden='true'></span>
+              <span class='sr-only'>Anterior</span>
+            </a>
+            <a class='carousel-control-next' href='#carouselExampleControls' role'button' data-slide='next'>
+              <span class='carousel-control-next-icon' aria-hidden='true'></span>
+              <span class='sr-only'>Próximo</span>
+            </a> 
+            </div>";
+        
+            return $texto_html_slide;
+            
+            }   
 
 function carregarOpenGraphs(){
 // Abrir conexao
@@ -446,6 +523,9 @@ $url = $dados_card['card_descricao'];
 
 
 
+
+
+
 /*libxml_use_internal_errors(true);
 $c = file_get_contents($url);
 $d = new DomDocument();
@@ -480,6 +560,67 @@ foreach ($xp->query("//meta[@property='og:image']") as $el) {
 return $texto_html_card;
 
 }
+
+
+
+function exibir_card_news ($id, $folder) {
+
+    $conecta = $_SERVER["conecta"];
+    
+    // Consulta a Tabela Slides
+    $consultar_card_1 = "SELECT * ";
+    $consultar_card_1 .= "FROM cards ";
+    $consultar_card_1 .= "WHERE  card_id = {$id} ";
+    $consultar_card_1 = mysqli_query($conecta, $consultar_card_1);
+    $dados_card = mysqli_fetch_assoc($consultar_card_1);
+    
+    
+    if($dados_card['card_pagina_id'] > 0) {
+        $dados_url = "noticia_mod.php?pg_id=".$dados_card['card_pagina_id'].""; 
+    } else{
+        $dados_url = $dados_card['card_url_externa'];  
+    }
+    
+
+        $texto_html_card =  
+        "<div class='col-md-6'>
+            <div class='row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative'>
+                <div class='col p-4 d-flex flex-column position-static'>
+                    <strong class='d-inline-block mb-2 text-lah'>".$dados_card['card_categoria']."</strong>";
+        $texto_html_card .=     
+        "           <h3 class='mb-0'>".$dados_card['card_nome']."</h3>
+                    <p class='mb-auto'>" .mb_strimwidth($dados_card['card_descricao'], 0, 75, "...")."</p>
+                    <div class='mb-1 text-muted'> <a style='text-decoration: none;'  target='_blank' href='".$dados_url."'> Continuar lendo </a> </div> 
+                </div>";   
+        $texto_html_card .= 
+        "       <div class='col-auto d-none d-lg-block'>
+                    <img class='img-card-2' src='" .$folder.$dados_card['card_image']. "' >
+                </div>
+                </div>
+        </div>";
+    
+    
+       
+       /*
+        $texto_html_card .=   
+        "<a style='text-decoration: none;'  target='_blank' href='".$url."'>";
+
+    
+        $texto_html_card .= 
+        "<img class='card-img-top imag-card w-100' src='" .$folder.$dados_card['card_image']. "'>
+        <div class='card-body'>
+        <h5 class='card-title'>" .mb_strimwidth($dados_card['card_nome'], 0, 65, '...'). "</h5>
+        </div>
+    
+        </a></div>
+        </div>";
+
+        */
+    
+    
+    return $texto_html_card;
+    
+    }
 
 
 function exibir_texto($tabela, $texto_id){
@@ -609,6 +750,7 @@ die(" Falha na Base de Dados! Function Pagina Fixa ");
 }
 //DADOS
 $dados_pagina = mysqli_fetch_assoc($info_pagina);
+print_r($dados_pagina);
 return array(
     $dados_pagina["pagina_id"], 
     $dados_pagina["pagina_titulo"], 

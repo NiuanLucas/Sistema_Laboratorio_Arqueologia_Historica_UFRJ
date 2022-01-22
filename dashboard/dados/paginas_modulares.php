@@ -42,7 +42,8 @@
 
 // Criando um array normal
 
-$categoria_pagina = array("eventos", "programas","projetos", "cursos", "producao_academica", "noticias", "especialidades", "linhas_de_pesquisa", "midias", "videos" );
+//$categoria_pagina = array("eventos", "programas","projetos", "cursos", "producao_academica", "noticias", "especialidades", "linhas_de_pesquisa", "midias", "videos" );
+$categoria_pagina = array("noticias");
 
 
 

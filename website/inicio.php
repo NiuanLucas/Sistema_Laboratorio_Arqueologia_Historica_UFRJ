@@ -24,105 +24,72 @@
         <div class="row">
 
           <div class="col-sm-6" style="background-color: rgb(70,30,10) !important;">
+          
             <h1 class="text-white"><b><?php echo $dados_pagina_fixa["pagina_titulo"];?></b></h1>
-            <p class="" style="color: red !important;">
+            <p class="" style="color: white !important; font-size: 13px !important; ">
             <?php echo base64_decode($dados_pagina_fixa["pagina_conteudo"]); ?>	</p>
           </div>
 
-          <div class="col-sm-6" style="background-color:rgb(70,30,10) !important;">
+          <div class="col-sm-6" style="">
+          <?php echo( exibir_slide_fixo( 0, '../dashboard/dados/', 'auto', '100%') ); ?>
+
+            <!--
             <img 
             class="d-block ml-sm-3" 
             style="width: auto !important; height: 100% !important;" 
             src="../dashboard/dados/<?php echo $dados_pagina_fixa["pagina_imagem_capa"];?>"
             >
+            -->
+
           </div>
           
         </div>
   </div>
 
-  <div class="row mb-2">
-    <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-lah">Notícias</strong>
-          <h3 class="mb-0">Evento no Museu</h3>
-          <div class="mb-1 text-muted">Nov 12</div>
-          <p class="card-text mb-auto">	Viverra quam placerat potenti curae duis ultricies dui, vehicula ut dapibus urna. </p>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-          <img class="img-card-2" src="../dashboard/dados/images_capas/image%20(1).jpg" >
-        </div>
-      </div>
-    </div>
 
-    <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-lah">Pesquisa</strong>
-          <h3 class="mb-0">Nova pesquisa encontrada</h3>
-          <div class="mb-1 text-muted">Nov 11</div>
-          <p class="mb-auto">	Donec tincidunt commodo mi hendrerit dui sed gravida, turpis malesuada felis viverra integer. </p>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-          <img class="img-card-2" src="../dashboard/dados/images_capas/image%20(2).jpg" >
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="row mb-2">
-    <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-lah">Mundo</strong>
-          <h3 class="mb-0">Descoberta científica </h3>
-          <div class="mb-1 text-muted">Nov 13</div>
-          <p class="card-text mb-auto">	Netus cubilia tempus lacus ultrices id cras tincidunt, neque congue lorem tincidunt orci. </p>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-          <img class="img-card-2" src="../dashboard/dados/images_capas/image%20(3).jpg" >
-        </div>
-      </div>
-    </div>
+<div class="row">
+  <?php echo( exibir_card_news(1,'../dashboard/dados/') ); ?>
+  <?php echo( exibir_card_news(2,'../dashboard/dados/') ); ?>
+  <?php echo( exibir_card_news(3,'../dashboard/dados/') ); ?>
+  <?php echo( exibir_card_news(4,'../dashboard/dados/') ); ?> 
+</div>
+
+
     
-    <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-lah">Extras</strong>
-          <h3 class="mb-0">Curiosidades</h3>
-          <div class="mb-1 text-muted">Nov 14</div>
-          <p class="mb-auto">	Sed commodo aliquet nisi nisl at pellentesque vel, dapibus sollicitudin eu bibendum pulvinar. </p>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-          <img class="img-card-2" src="../dashboard/dados/images_capas/image%20(4).jpg" >
-        </div>
-      </div>
-    </div>
-  </div>
+    
 
   <div class="row g-5">
     <div class="col-md-8">
+      
+    <!--
       <h3 class="pb-2 mb-4 fst-italic border-bottom">
         Introdução
-      </h3>
+    </h3>
+    -->
 
-      <article class="blog-post">
-        <h2 class="blog-post-title">Titulo 1</h2>
-        <p>	Eu class feugiat leo metus purus curabitur integer, volutpat venenatis adipiscing mi ullamcorper placerat, ipsum augue fusce aliquam eu primis. 
-        etiam per cras aliquam diam tempus sollicitudin commodo ac feugiat, torquent luctus ac senectus aliquet laoreet et nulla, 
-        ad a risus dolor facilisis egestas cras viverra. donec id risus urna eu felis elementum, eleifend sit etiam in justo, vestibulum etiam suscipit ultrices fermentum.
-        Et fermentum ornare accumsan curae lobortis tristique justo vivamus, fames tempor at quisque tortor pharetra et iaculis mauris, eget curabitur 
-        magna in curabitur erat sem. varius libero blandit 
-        auctor sapien ac euismod justo, consectetur habitant consequat ullamcorper hendrerit. congue quam placerat. </br></br>
+      </p><hr>
 
-        </p><hr>
+        <h2>LINKS UTEIS</h2>
 
-        <h2>Titulo 2</h2>
-        <p>	Sagittis venenatis nibh sodales faucibus quam facilisis cursus vulputate egestas, augue nullam sem eleifend molestie inceptos class auctor,
-           commodo nunc tellus hac commodo mauris amet nisi.
-           nisl habitant at curabitur metus arcu, phasellus suspendisse bibendum enim, eget nunc vitae est. </p>
+        <h3> Museu Nacional </h3>
+        <a target="_blanck" href="https://www.museunacional.ufrj.br ">
+        https://www.museunacional.ufrj.br </a>
 
-      </article>
+        <h3> PPGArq- Programa de pós-Graduação em Arqueologia </h3>
+        <a target="_blanck" href="https://www.museunacional.ufrj.br/ppgarq">
+        https://www.museunacional.ufrj.br/ppgarq</a>
+
+        <h3> LAH no Researchgate </h3>
+        <a target="_blanck" href="https://www.researchgate.net/lab/Laboratory-of-Historical-Archeology-National-Museum-UFRJ-Marcos-Andre-Torres-de-Souza">
+          https://www.researchgate.net/lab/Laboratory-of-Historical-Archeology-National-Museum-UFRJ-Marcos-Andre-Torres-de-Souza</a>
+
+      </p><hr>
+
+         
+
+
+
       
     </div>
 
@@ -132,16 +99,14 @@
         <div class="p-4">
           <h4 class="fst-italic"> <i class="fas fa-sitemap"></i> Mapa do site </h4>
           <ol class="list-unstyled">
-            <li><a href="../inicio.php?pg_id=">Inicio</a></li>
-            <li><a href="../colecoes/colecoes.php?pg_id=11">Arqueologia Histórica no Brasil</a></li>
-            <li><a href="../contato/contato.php?pg_id=18">Pessoas</a></li>
-            <li><a href="#">Infraestrutura</a></li>
-            <li><a href="#">Pesquisas</a></li>
-            <li><a href="#">Notícias</a></li>
-            <li><a href="#">SAHIST</a></li>
-            <li><a href="#">Instituições parceiras e financiadoras</a></li>
-            <li><a href="#">Links uteis</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="page.php?pg_id=2">Inicio</a></li>
+            <li><a href="page.php?pg_id=3">Arqueologia Histórica no Brasil</a></li>
+            <li><a href="page.php?pg_id=4">Pessoas</a></li>
+            <li><a href="page.php?pg_id=5">Infraestrutura</a></li>
+            <li><a href="page.php?pg_id=6">Pesquisas</a></li>
+            <li><a href="noticias.php?pg_id=7">Notícias</a></li>
+            <li><a href="page.php?pg_id=8">SAHIST</a></li>
+            <li><a href="contato.php?pg_id=11">Contato</a></li>
           </ol>
         </div>
       </div>

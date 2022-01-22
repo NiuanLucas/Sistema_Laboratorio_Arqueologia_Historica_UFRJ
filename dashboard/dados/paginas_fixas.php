@@ -8,9 +8,12 @@
     <div class="row">
     <h3 class="h4 m-3 col-0"><i class="fas fa-file"></i> Páginas fixas</h3>
 
+    
+    <!--
     <a href='inserir_paginas_fixas.php' class="col-0">
       <button type='button' class='btn bg-dark text-white mt-3 ml-3'> <i class="fas fa-plus"></i> Inserir nova página fixa</button>
-    </a>  
+    </a> 
+  --> 
 
     </div>
 

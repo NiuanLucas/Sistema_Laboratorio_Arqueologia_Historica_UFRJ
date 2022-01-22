@@ -263,15 +263,9 @@
   </div> 
 
 
-
-
-
-    <div class="form-group d-none">
-
+  <div class="form-group d-none">
     <label for="exampleFormControlInput1">Slide ID</label>
-
     <input value="<?php echo $dados_pagina['pagina_modular_slide']; ?>" type="text" name="pagina_modular_slide_old" class="form-control" placeholder="">
-
   </div>
 
 
@@ -329,7 +323,7 @@
 
     <label for="exampleFormControlTextarea1">Texto 1 (ao lado do slide/imagem)</label>
 
-    <textarea required  class="form-control ckeditor" name="pagina_modular_conteudo" id="pagina_modular_conteudo" rows="5">
+    <textarea required  class="form-control ckeditor" name="pagina_modular_conteudo" id="body" rows="5">
       <?php echo base64_decode($dados_pagina['pagina_modular_conteudo']); ?></textarea>
 
   </div>
@@ -340,7 +334,7 @@
 
     <label for="exampleFormControlTextarea1">Texto 2 (parte inferior)</label>
 
-    <textarea required  class="form-control ckeditor" name="pagina_modular_conteudo_2" id="pagina_modular_conteudo_2" rows="5">
+    <textarea required  class="form-control ckeditor" name="pagina_modular_conteudo_2" id="body2" rows="5">
       <?php echo base64_decode($dados_pagina['pagina_modular_conteudo_2']); ?></textarea>
 
   </div>
@@ -348,22 +342,23 @@
 
 
       <script>
+/*
+    CKEDITOR.replace( 'pagina_modular_conteudo', {
+      //filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
+      filebrowserUploadUrl: '/upload.php'
+    } );
 
+     
      CKEDITOR.replace( 'pagina_modular_conteudo', {
 
+      extraPlugins: "imageuploader",
       height: 300,
-
       filebrowserUploadUrl: "upload.php"
 
+
      });
-
-    </script>
-
-
-
-
-
-      <script>
+    
+ 
 
      CKEDITOR.replace( 'pagina_modular_conteudo_2', {
 
@@ -372,7 +367,7 @@
       filebrowserUploadUrl: "upload.php"
 
      });
-
+*/
     </script>
 
 

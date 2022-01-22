@@ -1,6 +1,25 @@
 
 
 <?php
+
+if (isset($_FILES['image'])) {
+    $image = $_FILES['image']['name'];
+    $target = "upload/" . basename($image);
+    if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+        //pegar url inteira
+        echo '//localhost/localhost/lah-museu/dashboard/dados/' . $target;
+        exit();
+    } else{
+        echo 'Failed to upload image';
+        exit();
+    }
+}
+
+
+
+
+
+/*
 if(isset($_FILES['upload']['name']))
 {
 	$file=$_FILES['upload']['name'];
@@ -12,10 +31,11 @@ if(isset($_FILES['upload']['name']))
 	$message='';
 	echo "<script>window.parent.CKEDITOR.tools.callFunction('".$function_number."','".$url."','".$message."');</script>";     
 }
-?>
+*/
 
 
-<?php
+
+
 
 
 
@@ -61,4 +81,3 @@ if(isset($_FILES['upload']['name']))
 
 
 */
-?>

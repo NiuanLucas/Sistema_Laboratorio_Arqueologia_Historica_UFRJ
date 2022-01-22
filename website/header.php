@@ -409,21 +409,13 @@ justify-content: left;
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" target="_self" href="page.php?pg_id=7">Notícias</a>
+            <a class="nav-link" target="_self" href="noticias.php?pg_id=7">Notícias</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" target="_self" href="page.php?pg_id=8">SAHIST</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" target="_self" href="page.php?pg_id=9">Parceiros e Financiadoras</a>
+            <a class="nav-link" target="_self" href="">SAHIST</a>
           </li>
         
-          <li class="nav-item">
-            <a class="nav-link" target="_self" href="page.php?pg_id=10">Links uteis</a>
-          </li>
-
           <li class="nav-item">
             <a class="nav-link" target="_self" href="contato.php?pg_id=11">Contato</a>
           </li>

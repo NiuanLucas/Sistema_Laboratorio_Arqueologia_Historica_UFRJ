@@ -23,6 +23,8 @@ $mensagem1 = "";
 
         $card_descricao = $_POST["card_descricao"];
 
+        $card_url_externa = $_POST["card_url_externa"];
+
         $card_categoria = $_POST["card_categoria"];
 
         $card_pagina_id = $_POST["card_pagina_id"];
@@ -63,6 +65,8 @@ $mensagem1 = "";
         $atualizar .= "card_nome = '{$card_nome}', ";
 
         $atualizar .= "card_descricao = '{$card_descricao}', ";
+
+        $atualizar .= "card_url_externa = '{$card_url_externa}', ";
 
         $atualizar .= "card_categoria = '{$card_categoria}', ";
 
@@ -205,9 +209,17 @@ $mensagem1 = "";
 
   <div class="form-group">
 
-    <label for="exampleFormControlInput1">URL</label>
+    <label for="exampleFormControlInput1">Descrição</label>
 
     <input type="text" name="card_descricao" value="<?php echo $dados_pagina['card_descricao']; ?>" class="form-control" placeholder="">
+
+  </div>
+
+  <div class="form-group">
+
+    <label for="exampleFormControlInput1">URL</label>
+
+    <input type="text" name="card_url_externa" value="<?php echo $dados_pagina['card_url_externa']; ?>" class="form-control" placeholder="">
 
   </div>
 
@@ -233,6 +245,22 @@ $mensagem1 = "";
   </div>  
 
 
+
+
+  <div class="form-group">
+
+    <label for="exampleFormControlInput1">Categoria</label>
+
+    <input type="text" name="card_categoria" value="<?php echo $dados_pagina['card_categoria']; ?>" class="form-control" placeholder="">
+
+  </div>
+
+
+
+
+
+  <!--
+
   <div class="form-group">
 
   <label for="exampleFormControlInput1">Categoria</label>
@@ -253,6 +281,7 @@ $mensagem1 = "";
 
   </div>
 
+  -->
 
 
   

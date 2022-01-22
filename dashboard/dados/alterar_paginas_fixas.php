@@ -24,11 +24,24 @@
 
         $pagina_categoria = $_POST["pagina_categoria"];
 
+        $pagina_slide = $_POST["pagina_slide"];
+
         $pagina_descricao = $_POST["pagina_descricao"];
 
         $pagina_palavras_chaves = $_POST["pagina_palavras_chaves"];
 
         $pagina_imagem_capa2 = $_POST["pagina_imagem_capa"];
+
+        
+        if ( isset($_POST["pagina_slide"]) ) {
+
+          $pagina_slide = $_POST["pagina_slide"];
+
+        } else {
+
+          $pagina_slide = $_POST["pagina_slide_old"];
+
+        }
 
 
         //Existe Nova imagem, logo faça o upload 
@@ -79,6 +92,8 @@
         $atualizar .= "pagina_categoria = '{$pagina_categoria}', ";
 
         $atualizar .= "pagina_descricao = '{$pagina_descricao}', ";
+
+        $atualizar .= "pagina_slide = '{$pagina_slide}', ";
 
         $atualizar .= "pagina_palavras_chaves = '{$pagina_palavras_chaves}', ";
 
@@ -214,13 +229,43 @@
 
 
 
-  <div class="d-none form-group">
+  <div class="form-group">
 
-    <label for="exampleFormControlInput1">Image Folder</label>
+<label for="exampleFormControlInput1">Selecionar Slide Anexado</label>
 
-    <input value="<?php echo $dados_pagina['pagina_imagem_capa']; ?>" type="text" name="pagina_imagem_capa" class="form-control" placeholder="">
+<select class="form-control " name="pagina_slide">
 
-  </div>
+<option selected=""  disabled="">Selecionar Escolher Slide</option>
+
+<option value=" "> 0 - (Escolha essa opção para uma Página sem Slide)</option>
+
+<?php while($linha4 = mysqli_fetch_assoc($consulta_tr4)) { ?>  
+
+<option value="<?php echo $linha4['slide_id']; ?>"> <?php echo $linha4['slide_descricao']; ?> </option>
+
+<?php } ?>
+
+</select>
+
+<small class="text-muted mt-0 mb-3"> *Para um novo objeto slide ser exibido nas opções acima, deve ser criado antes desta página.  </small>
+
+</div> 
+
+
+<div class="form-group d-none">
+  <label for="exampleFormControlInput1">Slide ID</label>
+  <input value="<?php echo $dados_pagina['pagina_slide']; ?>" type="text" name="pagina_slide_old" class="form-control" placeholder="">
+</div>
+
+
+
+<div class="form-group d-none">
+
+  <label for="exampleFormControlInput1">Image Folder</label>
+
+  <input required value="<?php echo $dados_pagina['pagina_imagem_capa']; ?>" type="text" name="pagina_imagem_capa" class="form-control" placeholder="">
+
+</div>
 
   <div class="form-group">
 
@@ -251,7 +296,7 @@
   <div class="form-group panel-body">
 
     <label for="exampleFormControlTextarea1">Conteudo</label>
-    <textarea required="" class="form-control ckeditor" name="pagina_conteudo" id="pagina_conteudo" rows="5">
+    <textarea required="" class="form-control ckeditor" name="pagina_conteudo" id="body" rows="5">
       <?php echo base64_decode($dados_pagina['pagina_conteudo']); ?></textarea>
 
   </div>
@@ -259,13 +304,13 @@
   <div class="form-group panel-body">
 
   <label for="exampleFormControlTextarea2">Conteudo Secundário</label>
-  <textarea required="" class="form-control ckeditor" name="pagina_conteudo_2" id="pagina_conteudo_2" rows="5">
+  <textarea required="" class="form-control ckeditor" name="pagina_conteudo_2" id="body2" rows="5">
     <?php echo base64_decode($dados_pagina['pagina_conteudo_2']); ?></textarea>
 
   </div>
 
 
-
+<!--
     <script>
     var editor=CKEDITOR.replace( 'pagina_conteudo',{
       height: 300,
@@ -284,6 +329,7 @@
     });
     </script>
 
+  -->
 
 
   <center>
